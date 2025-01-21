@@ -1,0 +1,64 @@
+[2025-01-16T05:15:57.506+0000] {processor.py:186} INFO - Started process (PID=83) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py
+[2025-01-16T05:15:57.509+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py for tasks to queue
+[2025-01-16T05:15:57.522+0000] {logging_mixin.py:190} INFO - [2025-01-16T05:15:57.519+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py
+[2025-01-16T05:16:01.933+0000] {logging_mixin.py:190} INFO - [2025-01-16T05:16:01.932+0000] {process_utils.py:266} INFO - Waiting up to 5 seconds for processes to exit...
+[2025-01-16T05:16:01.934+0000] {logging_mixin.py:190} WARNING - Exception ignored in: <function WeakKeyDictionary.__init__.<locals>.remove at 0x7fe3eb5d3a60>
+[2025-01-16T05:16:01.935+0000] {logging_mixin.py:190} WARNING - Traceback (most recent call last):
+[2025-01-16T05:16:01.935+0000] {logging_mixin.py:190} WARNING -   File "/usr/local/lib/python3.12/weakref.py", line 369, in remove
+[2025-01-16T05:16:01.936+0000] {logging_mixin.py:190} WARNING -     def remove(k, selfref=ref(self)):
+[2025-01-16T05:16:01.936+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 468, in _exit_gracefully
+[2025-01-16T05:16:01.937+0000] {logging_mixin.py:190} WARNING -     self.end()
+[2025-01-16T05:16:01.937+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 1435, in end
+[2025-01-16T05:16:01.939+0000] {logging_mixin.py:190} WARNING -     kill_child_processes_by_pids(pids_to_kill)
+[2025-01-16T05:16:01.939+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 258, in kill_child_processes_by_pids
+[2025-01-16T05:16:01.940+0000] {logging_mixin.py:190} WARNING -     x for x in this_process.children(recursive=True) if x.is_running() and x.pid in pids_to_kill
+[2025-01-16T05:16:01.940+0000] {logging_mixin.py:190} WARNING -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.941+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 971, in children
+[2025-01-16T05:16:01.942+0000] {logging_mixin.py:190} WARNING -     self._raise_if_pid_reused()
+[2025-01-16T05:16:01.943+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 461, in _raise_if_pid_reused
+[2025-01-16T05:16:01.943+0000] {logging_mixin.py:190} WARNING -     if self._pid_reused or (not self.is_running() and self._pid_reused):
+[2025-01-16T05:16:01.944+0000] {logging_mixin.py:190} WARNING -                                 ^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.944+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 636, in is_running
+[2025-01-16T05:16:01.945+0000] {logging_mixin.py:190} WARNING -     self._pid_reused = self != Process(self.pid)
+[2025-01-16T05:16:01.945+0000] {logging_mixin.py:190} WARNING -                                ^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.946+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+[2025-01-16T05:16:01.946+0000] {logging_mixin.py:190} WARNING -     self._init(pid)
+[2025-01-16T05:16:01.947+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+[2025-01-16T05:16:01.947+0000] {logging_mixin.py:190} WARNING -     self._ident = self._get_ident()
+[2025-01-16T05:16:01.948+0000] {logging_mixin.py:190} WARNING -                   ^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.948+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+[2025-01-16T05:16:01.949+0000] {logging_mixin.py:190} WARNING -     return (self.pid, self.create_time())
+[2025-01-16T05:16:01.950+0000] {logging_mixin.py:190} WARNING -                       ^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.950+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+[2025-01-16T05:16:01.951+0000] {logging_mixin.py:190} WARNING -     self._create_time = self._proc.create_time()
+[2025-01-16T05:16:01.951+0000] {logging_mixin.py:190} WARNING -                         ^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.952+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_pslinux.py", line 1717, in wrapper
+[2025-01-16T05:16:01.952+0000] {logging_mixin.py:190} WARNING -     return fun(self, *args, **kwargs)
+[2025-01-16T05:16:01.953+0000] {logging_mixin.py:190} WARNING -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.953+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_pslinux.py", line 1953, in create_time
+[2025-01-16T05:16:01.954+0000] {logging_mixin.py:190} WARNING -     ctime = float(self._parse_stat_file()['create_time'])
+[2025-01-16T05:16:01.954+0000] {logging_mixin.py:190} WARNING -                   ^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.955+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_pslinux.py", line 1717, in wrapper
+[2025-01-16T05:16:01.955+0000] {logging_mixin.py:190} WARNING -     return fun(self, *args, **kwargs)
+[2025-01-16T05:16:01.956+0000] {logging_mixin.py:190} WARNING -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.956+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+[2025-01-16T05:16:01.956+0000] {logging_mixin.py:190} WARNING -     return fun(self)
+[2025-01-16T05:16:01.957+0000] {logging_mixin.py:190} WARNING -            ^^^^^^^^^
+[2025-01-16T05:16:01.957+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_pslinux.py", line 1780, in _parse_stat_file
+[2025-01-16T05:16:01.958+0000] {logging_mixin.py:190} WARNING -     data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+[2025-01-16T05:16:01.958+0000] {logging_mixin.py:190} WARNING -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.958+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+[2025-01-16T05:16:01.959+0000] {logging_mixin.py:190} WARNING -     return cat(fname, fallback=fallback, _open=open_binary)
+[2025-01-16T05:16:01.959+0000] {logging_mixin.py:190} WARNING -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-01-16T05:16:01.960+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/psutil/_common.py", line 832, in cat
+[2025-01-16T05:16:01.960+0000] {logging_mixin.py:190} WARNING -     def cat(fname, fallback=_DEFAULT, _open=open_text):
+[2025-01-16T05:16:01.961+0000] {logging_mixin.py:190} WARNING -     
+[2025-01-16T05:16:01.961+0000] {logging_mixin.py:190} WARNING -   File "/home/airflow/.local/lib/python3.12/site-packages/airflow/dag_processing/manager.py", line 470, in _exit_gracefully
+[2025-01-16T05:16:01.961+0000] {logging_mixin.py:190} WARNING -     sys.exit(os.EX_OK)
+[2025-01-16T05:16:01.962+0000] {logging_mixin.py:190} WARNING - SystemExit: 0
+[2025-01-16T05:16:02.037+0000] {processor.py:925} INFO - DAG(s) 'dataset_with_extra_by_yield', 'dataset_with_extra_from_classic_operator', 'dataset_with_extra_by_context' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py
+[2025-01-16T05:16:02.078+0000] {logging_mixin.py:190} INFO - [2025-01-16T05:16:02.078+0000] {dag.py:3239} INFO - Sync 3 DAGs
+[2025-01-16T05:16:02.109+0000] {logging_mixin.py:190} INFO - [2025-01-16T05:16:02.108+0000] {dag.py:4180} INFO - Setting next_dagrun for dataset_with_extra_by_context to 2025-01-15 00:00:00+00:00, run_after=2025-01-16 00:00:00+00:00
+[2025-01-16T05:16:02.119+0000] {logging_mixin.py:190} INFO - [2025-01-16T05:16:02.119+0000] {dag.py:4180} INFO - Setting next_dagrun for dataset_with_extra_by_yield to 2025-01-15 00:00:00+00:00, run_after=2025-01-16 00:00:00+00:00
+[2025-01-16T05:16:02.123+0000] {logging_mixin.py:190} INFO - [2025-01-16T05:16:02.123+0000] {dag.py:4180} INFO - Setting next_dagrun for dataset_with_extra_from_classic_operator to 2025-01-15 00:00:00+00:00, run_after=2025-01-16 00:00:00+00:00
+[2025-01-16T05:16:02.148+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_outlet_event_extra.py took 4.651 seconds
